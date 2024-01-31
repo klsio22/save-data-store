@@ -1,8 +1,13 @@
 import Head from 'next/head';
+import { runSearch } from '../utils/functions';
 
 const Search = () => {
+  const handleButtonClick = async () => {
+    await runSearch('carrinho brinquedo');
+  };
+
   return (
-    <div style={{ width : '100%' }}>
+    <div style={{ width: '100%' }}>
       <Head>
         <title>Shopee</title>
       </Head>
@@ -16,7 +21,7 @@ const Search = () => {
           borderRadius: '0.375rem',
           boxShadow:
             '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-         
+
           maxWidth: '280px',
           margin: '0 auto',
           gap: '2rem',
@@ -66,6 +71,7 @@ const Search = () => {
             placeholder="Busque aqui"
           />
           <button
+            onClick={() => handleButtonClick}
             style={{
               width: '100%',
               padding: '0.75rem',
