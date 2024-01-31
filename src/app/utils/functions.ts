@@ -132,7 +132,7 @@ function doSearch(text: string): void {
   window.location.href = `https://shopee.com.br/search?keyword=${text}`;
 }
 
-async function runSearch(text: string): Promise<void> {
+export async function runSearch(text: string): Promise<void> {
   console.info('Getting information.. ');
   text = 'carrinho brinquedo';
   doSearch(text);
